@@ -15,7 +15,8 @@ decoder_thread_num=$(cat /proc/cpuinfo | grep "processor"|wc -l) || { echo "Get 
 multiple_io=16
 io_thread_num=$(( (decoder_thread_num + multiple_io - 1) / multiple_io ))
 model_thread_num=1
-
+cmd_path=/workspace/FunASR/runtime/websocket/build/bin
+cmd=funasr-wss-server-2pass
 
 . $(pwd)/asr/parse_options.sh || exit 1;
 
@@ -24,7 +25,8 @@ if [ -z "$certfile" ] || [ "$certfile" = "0" ]; then
   keyfile=""
 fi
 
-asr/funasr-wss-server-2pass  \
+cd $cmd_path
+$cmd_path/${cmd}  \
   --download-model-dir "${download_model_dir}" \
   --model-dir "${model_dir}" \
   --online-model-dir "${online_model_dir}" \

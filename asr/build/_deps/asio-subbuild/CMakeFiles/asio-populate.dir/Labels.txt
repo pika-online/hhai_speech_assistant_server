@@ -1,0 +1,14 @@
+# Target labels
+ asio-populate
+# Source files and their labels
+/root/FunASR/runtime/websocket/build/_deps/asio-subbuild/CMakeFiles/asio-populate
+/root/FunASR/runtime/websocket/build/_deps/asio-subbuild/CMakeFiles/asio-populate.rule
+/root/FunASR/runtime/websocket/build/_deps/asio-subbuild/CMakeFiles/asio-populate-complete.rule
+/root/FunASR/runtime/websocket/build/_deps/asio-subbuild/asio-populate-prefix/src/asio-populate-stamp/asio-populate-build.rule
+/root/FunASR/runtime/websocket/build/_deps/asio-subbuild/asio-populate-prefix/src/asio-populate-stamp/asio-populate-configure.rule
+/root/FunASR/runtime/websocket/build/_deps/asio-subbuild/asio-populate-prefix/src/asio-populate-stamp/asio-populate-download.rule
+/root/FunASR/runtime/websocket/build/_deps/asio-subbuild/asio-populate-prefix/src/asio-populate-stamp/asio-populate-install.rule
+/root/FunASR/runtime/websocket/build/_deps/asio-subbuild/asio-populate-prefix/src/asio-populate-stamp/asio-populate-mkdir.rule
+/root/FunASR/runtime/websocket/build/_deps/asio-subbuild/asio-populate-prefix/src/asio-populate-stamp/asio-populate-patch.rule
+/root/FunASR/runtime/websocket/build/_deps/asio-subbuild/asio-populate-prefix/src/asio-populate-stamp/asio-populate-test.rule
+/root/FunASR/runtime/websocket/build/_deps/asio-subbuild/asio-populate-prefix/src/asio-populate-stamp/asio-populate-update.rule

@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/root/FunASR/runtime/websocket/build/_deps/portaudio-subbuild/CMakeFiles/portaudio-populate"
+		},
+		{
+			"file" : "/root/FunASR/runtime/websocket/build/_deps/portaudio-subbuild/CMakeFiles/portaudio-populate.rule"
+		},
+		{
+			"file" : "/root/FunASR/runtime/websocket/build/_deps/portaudio-subbuild/CMakeFiles/portaudio-populate-complete.rule"
+		},
+		{
+			"file" : "/root/FunASR/runtime/websocket/build/_deps/portaudio-subbuild/portaudio-populate-prefix/src/portaudio-populate-stamp/portaudio-populate-build.rule"
+		},
+		{
+			"file" : "/root/FunASR/runtime/websocket/build/_deps/portaudio-subbuild/portaudio-populate-prefix/src/portaudio-populate-stamp/portaudio-populate-configure.rule"
+		},
+		{
+			"file" : "/root/FunASR/runtime/websocket/build/_deps/portaudio-subbuild/portaudio-populate-prefix/src/portaudio-populate-stamp/portaudio-populate-download.rule"
+		},
+		{
+			"file" : "/root/FunASR/runtime/websocket/build/_deps/portaudio-subbuild/portaudio-populate-prefix/src/portaudio-populate-stamp/portaudio-populate-install.rule"
+		},
+		{
+			"file" : "/root/FunASR/runtime/websocket/build/_deps/portaudio-subbuild/portaudio-populate-prefix/src/portaudio-populate-stamp/portaudio-populate-mkdir.rule"
+		},
+		{
+			"file" : "/root/FunASR/runtime/websocket/build/_deps/portaudio-subbuild/portaudio-populate-prefix/src/portaudio-populate-stamp/portaudio-populate-patch.rule"
+		},
+		{
+			"file" : "/root/FunASR/runtime/websocket/build/_deps/portaudio-subbuild/portaudio-populate-prefix/src/portaudio-populate-stamp/portaudio-populate-test.rule"
+		},
+		{
+			"file" : "/root/FunASR/runtime/websocket/build/_deps/portaudio-subbuild/portaudio-populate-prefix/src/portaudio-populate-stamp/portaudio-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"portaudio-populate"
+		],
+		"name" : "portaudio-populate"
+	}
+}

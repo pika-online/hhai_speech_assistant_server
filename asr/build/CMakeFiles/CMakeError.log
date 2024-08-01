@@ -1,0 +1,84 @@
+Performing C++ SOURCE FILE Test HAVE_NO_UNNAMED_TYPE_TEMPLATE_ARGS failed with the following output:
+Change Dir: /root/FunASR/runtime/websocket/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_9ed73/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_9ed73.dir/build.make CMakeFiles/cmTC_9ed73.dir/build
+gmake[1]: Entering directory '/root/FunASR/runtime/websocket/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_9ed73.dir/src.cxx.o
+/usr/bin/c++ -DHAVE_NO_UNNAMED_TYPE_TEMPLATE_ARGS  -pthread -fPIC  -fPIE   -Wunnamed-type-template-args -std=gnu++14 -o CMakeFiles/cmTC_9ed73.dir/src.cxx.o -c /root/FunASR/runtime/websocket/build/CMakeFiles/CMakeTmp/src.cxx
+c++: error: unrecognized command-line option '-Wunnamed-type-template-args'
+gmake[1]: *** [CMakeFiles/cmTC_9ed73.dir/build.make:78: CMakeFiles/cmTC_9ed73.dir/src.cxx.o] Error 1
+gmake[1]: Leaving directory '/root/FunASR/runtime/websocket/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_9ed73/fast] Error 2
+
+
+Source file was:
+int main() { return 0; }
+Determining if the pthread_threadid_np exist failed with the following output:
+Change Dir: /root/FunASR/runtime/websocket/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_85ac3/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_85ac3.dir/build.make CMakeFiles/cmTC_85ac3.dir/build
+gmake[1]: Entering directory '/root/FunASR/runtime/websocket/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_85ac3.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++   -pthread -fPIC  -fPIE -std=gnu++14 -o CMakeFiles/cmTC_85ac3.dir/CheckSymbolExists.cxx.o -c /root/FunASR/runtime/websocket/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/root/FunASR/runtime/websocket/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/root/FunASR/runtime/websocket/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘pthread_threadid_np’ was not declared in this scope; did you mean ‘pthread_tryjoin_np’?
+    8 |   return ((int*)(&pthread_threadid_np))[argc];
+      |                   ^~~~~~~~~~~~~~~~~~~
+      |                   pthread_tryjoin_np
+gmake[1]: *** [CMakeFiles/cmTC_85ac3.dir/build.make:78: CMakeFiles/cmTC_85ac3.dir/CheckSymbolExists.cxx.o] Error 1
+gmake[1]: Leaving directory '/root/FunASR/runtime/websocket/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_85ac3/fast] Error 2
+
+
+File /root/FunASR/runtime/websocket/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_threadid_np
+  return ((int*)(&pthread_threadid_np))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the function UnDecorateSymbolName exists in the dbghelp failed with the following output:
+Change Dir: /root/FunASR/runtime/websocket/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_7a4fb/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_7a4fb.dir/build.make CMakeFiles/cmTC_7a4fb.dir/build
+gmake[1]: Entering directory '/root/FunASR/runtime/websocket/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_7a4fb.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=UnDecorateSymbolName -fPIE -o CMakeFiles/cmTC_7a4fb.dir/CheckFunctionExists.c.o -c /usr/share/cmake-3.22/Modules/CheckFunctionExists.c
+Linking C executable cmTC_7a4fb
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7a4fb.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=UnDecorateSymbolName CMakeFiles/cmTC_7a4fb.dir/CheckFunctionExists.c.o -o cmTC_7a4fb  -ldbghelp 
+/usr/bin/ld: cannot find -ldbghelp: No such file or directory
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [CMakeFiles/cmTC_7a4fb.dir/build.make:99: cmTC_7a4fb] Error 1
+gmake[1]: Leaving directory '/root/FunASR/runtime/websocket/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_7a4fb/fast] Error 2
+
+
+
+Performing C++ SOURCE FILE Test HAVE___DECLSPEC failed with the following output:
+Change Dir: /root/FunASR/runtime/websocket/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_62a23/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_62a23.dir/build.make CMakeFiles/cmTC_62a23.dir/build
+gmake[1]: Entering directory '/root/FunASR/runtime/websocket/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_62a23.dir/src.cxx.o
+/usr/bin/c++ -DHAVE___DECLSPEC  -pthread -fPIC  -fPIE -std=gnu++14 -o CMakeFiles/cmTC_62a23.dir/src.cxx.o -c /root/FunASR/runtime/websocket/build/CMakeFiles/CMakeTmp/src.cxx
+/root/FunASR/runtime/websocket/build/CMakeFiles/CMakeTmp/src.cxx:2:11: error: expected constructor, destructor, or type conversion before ‘(’ token
+    2 | __declspec(selectany) int a;
+      |           ^
+gmake[1]: *** [CMakeFiles/cmTC_62a23.dir/build.make:78: CMakeFiles/cmTC_62a23.dir/src.cxx.o] Error 1
+gmake[1]: Leaving directory '/root/FunASR/runtime/websocket/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_62a23/fast] Error 2
+
+
+Source file was:
+
+__declspec(selectany) int a;
+int main(void) { return 0; }
+

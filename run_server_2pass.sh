@@ -15,7 +15,7 @@ decoder_thread_num=$(cat /proc/cpuinfo | grep "processor"|wc -l) || { echo "Get 
 multiple_io=16
 io_thread_num=$(( (decoder_thread_num + multiple_io - 1) / multiple_io ))
 model_thread_num=1
-cmd_path=/workspace/FunASR/runtime/websocket/build/bin
+cmd_path=/root/FunASR/runtime/websocket/build/bin
 cmd=funasr-wss-server-2pass
 
 . $(pwd)/asr/parse_options.sh || exit 1;

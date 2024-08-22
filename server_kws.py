@@ -4,7 +4,7 @@ import websockets
 import asyncio
 import json
 import numpy as np
-
+import base64
 
 def float_to_int16(data, width=16):
     """Convert floating-point audio data to int16 format."""
@@ -49,13 +49,14 @@ async def keyword_spotting_handler(websocket, path):
     keyword_spotter = None
     stream = None
 
-    try:
-        async for message in websocket:
+    async for message in websocket:
+        
+        try:
             data = json.loads(message)
-
+            
             # Initialize the model
             if data['remote'] == "init":
-                model_directory = "models/sherpa-onnx-kws-zipformer-wenetspeech-3.3M-2024-01-01"
+                model_directory = "/root/hhai_speech_assistant_server/models/sherpa-onnx-kws-zipformer-wenetspeech-3.3M-2024-01-01"
                 keyword_spotter = initialize_model(model_directory)
                 words = data['words']
                 lexicon = "/".join(words_to_lexicon(words, tokens=f"{model_directory}/tokens.txt"))
@@ -74,9 +75,11 @@ async def keyword_spotting_handler(websocket, path):
 
             # Start keyword spotting
             elif data['remote'] == "listen":
-                samples = int16_to_float(data['samples'])
-                sample_rate = data['sample_rate']
-                stream.accept_waveform(sample_rate, samples)
+                samples = data['samples']
+                # samples = np.frombuffer(base64.b64decode(samples),dtype='int16')
+                samples = int16_to_float(samples)
+
+                stream.accept_waveform(data['sample_rate'], samples)
                 while keyword_spotter.is_ready(stream):
                     keyword_spotter.decode_stream(stream)
                 result = keyword_spotter.get_result(stream)
@@ -84,10 +87,9 @@ async def keyword_spotting_handler(websocket, path):
                     print(result)
                     await websocket.send(json.dumps({'code': 0, 'message': result, 'remote': 'listen'}))
 
-    except websockets.ConnectionClosedError as e:
-        print(f"Connection closed with error: {e}")
-    except Exception as e:
-        await websocket.send(json.dumps({'code': 1, 'message': str(e), 'remote': data['remote']}))
+        except Exception as e:
+            print(e)
+            await websocket.send(json.dumps({'code': 1, 'message': str(e), 'remote': data['remote']}))
 
 
 if __name__ == "__main__":
